@@ -1,0 +1,15 @@
+SetEnv PHP_VER 5
+
+Options +FollowSymLinks
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^word/(.*)\/ ?p=word.print&word=$1 [L]
+RewriteRule ^word/list\.html ?p=word.list [L]
+RewriteRule ^fr/(.*)_(.*)\/ ?p=trad.print&trad=$1 [L]
+RewriteRule fr/list\.html ?p=fr.list [L]
+RewriteRule ^word/list\.html ?p=word.list [L]
+RewriteRule ^keyword/(.*)\/ ?p=keyword&kword=$1 [L]
+RewriteRule ^keyword/list\.html ?p=keyword.list [L]
+</IfModule>
